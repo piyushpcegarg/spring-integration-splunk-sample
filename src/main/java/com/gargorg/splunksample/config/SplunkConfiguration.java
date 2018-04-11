@@ -35,6 +35,8 @@ public class SplunkConfiguration {
     private int port;
     @Value("${splunkserver.scheme}")
     private String scheme;
+    @Value("${splunkserver.app}")
+    private String app;
 
     @Value("${splunkserver.owner}")
     private String owner;
@@ -62,6 +64,7 @@ public class SplunkConfiguration {
         splunkServer.setHost(host);
         splunkServer.setPort(port);
         splunkServer.setScheme(scheme);
+        splunkServer.setApp(app);
 
         splunkServer.setOwner(owner);
         splunkServer.setUsername(username);
